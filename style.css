@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    box-sizing: border-box;
+}
+
+/* ------------adjust for mobile----------------- */
+@media (max-width: 600px) {
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* body {
+    background-color: rgb(255, 230, 200);
+} */
+
+#header {
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(255, 250, 244);
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 5%;
+    font-size: 30px;
+    margin-left: 31px;
+    position: absolute;
+}
+
+.header-text h1 {
+    font-size: 51px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* .img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-image: url(img/photo.jpeg);
+    background-size: cover;
+    margin-left: 693px;
+    margin-top: 70px;
+    position: relative;
+} */
+
+/* -----------about------------ */
+
+#about {
+    padding: 50px 0;
+    /* color: #ababab; */
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 78%;
+    border-radius: 50%;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.about-col-2 h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.about-col-2 p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* ------------------------------skillss---------------------------- */
+
+#portfolio {
+    /* background-color: rgb(255, 238, 218); */
+    background-color: rgb(255, 250, 244);
+    /* background-color: rgb(245, 228, 207); */
+    height: 450px;
+}
+
+#portfolio .container h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+
+.tab-titles p {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.tab-links {
+    margin-right: 150px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.05s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+    margin-left: 35%;
+    background-color: #f83c78;
+    color: #fff;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.tab-contents ul {
+    padding: 30px;
+}
+
+.tab-contents.active-tab {
+    display: block;
+    padding-left: 50px;
+}
+
+.tab-contents .active-tab ul {
+    height: 200px;
+
+}
+
+/* ----------------------Ptojects------------------ */
+
+#projects {
+    padding: 30px 0;
+}
+
+.sub-titles {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    /*  margin-top: 20px; */
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project-list div {
+    background: #7b7a7a;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    color: black;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.project-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.project-list div:hover {
+    background-color: #ff004f;
+    color: #fff;
+}
+
+/* ------------------contact---------------- */
+
+#contact .container {
+    background-color: rgb(245, 228, 207);
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    /* color: #727272; */
+    color: indigo;
+    /* transition: color 0.3s, transform 0.3s; */
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    /* transform: scale(1.2); */
+    transform: translateY(-5px);
+}
+
+.btn {
+    background-color: #ff004f;
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #f9598c;
+    transform: scale(1.2);
+}
+
+.download-cv {
+    width: 600px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.download-cv hr {
+    width: 50%;
+    margin-left: 146px;
+}
+
+.download-cv i {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* --------------------Internships----------------------- */
+#internships {
+    padding: 50px 0;
+    background-color: #fef4f8;
+}
+
+#internships .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#internships .sub-titles {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#internships ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#internships ul li {
+    background-color: #fff;
+    border-left: 5px solid #ff004f;
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#internships ul li:hover {
+    background-color: #f9598c;
+    color: #fff;
+}
+
+/* ---------------------footer copyright------------------- */
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #f9598c;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/* .copyright i {
+    color: #ff004f;
+} */
+
+
+/* --------------------------scroll behaviour-------------- */
+
+html {
+    scroll-behavior: smooth;
+}
